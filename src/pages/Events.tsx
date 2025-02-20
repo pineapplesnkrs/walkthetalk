@@ -26,9 +26,11 @@ const Events = () => {
                 <div className="p-6">
                   <h2 className="text-2xl font-bold text-gray-800 mb-4">3rd Annual 5K Walk</h2>
                   <p className="text-gray-600 mb-6">
-                    Join us for our next community walk as we continue our mission of supporting local families
-                    and strengthening our community. This year's proceeds will help fund initiatives that make
-                    a direct impact in Southern New Jersey.
+                    Join us for our next community walk benefiting The Ike Foundation®, a non-profit organization 
+                    dedicated to connecting underserved youth with fishing and outdoor activities. The foundation's 
+                    mission is to get urban and rural kids into the outdoors and foster a passion for nature through 
+                    hands-on experiences. Your participation helps provide fishing equipment, educational programs, 
+                    and college scholarships to young outdoor enthusiasts.
                   </p>
                   <button className="btn-primary">Register Now</button>
                 </div>
