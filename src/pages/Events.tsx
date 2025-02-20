@@ -4,7 +4,7 @@ const Events = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Banner */}
-      <div className="bg-kelly-green text-white py-16">
+      <div className="bg-kelly-green text-white pt-28 pb-16">
         <div className="container-custom text-center">
           <h1 className="text-5xl font-bold mb-4">Our Charity Walks</h1>
           <p className="text-xl">Making strides for change in our community</p>
