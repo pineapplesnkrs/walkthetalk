@@ -195,8 +195,15 @@ function HomePage() {
                 Making a difference, one step at a time.
               </p>
               <div className="mt-4">
-                <p className="text-gray-400 hover:text-white transition-colors duration-300">Greater Philadelphia Area</p>
-                <p className="text-gray-400 hover:text-white transition-colors duration-300">Southern New Jersey</p>
+                <a 
+                  href="https://maps.google.com/?q=1535+Gateway+Blvd,+Woodbury,+NJ+08096"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors duration-300 block"
+                >
+                  1535 Gateway Blvd<br />
+                  Woodbury, NJ 08096
+                </a>
                 <a 
                   href="tel:+18568121222" 
                   className="text-gray-400 hover:text-white transition-colors duration-300 block mt-2"
