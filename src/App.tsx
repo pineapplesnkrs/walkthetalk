@@ -139,19 +139,30 @@ function HomePage() {
             <h2 className="text-3xl font-bold mb-6 text-center">About Walk the Talk with Tim</h2>
             <div className="space-y-6 text-gray-600">
               <p className="hover:text-black transition-colors duration-300">
-                Founded by Tim Jennings, a respected community leader with over 25 years in the communications industry,
-                Walk the Talk is dedicated to making a positive impact in our community through charitable walks and
-                community engagement.
+                Founded by Tim Jennings, a respected community leader and entrepreneur with over 25 years 
+                in the technology industry, Walk the Talk emerged from a passion for connecting and 
+                strengthening our community. As the Owner and CEO of Telecorp Technologies, a full-service 
+                IT and Telecom company established in 1998, Tim has demonstrated his ability to identify 
+                and solve complex challenges.
               </p>
               <p className="hover:text-black transition-colors duration-300">
-                Tim's entrepreneurial spirit and dedication to community service is reflected in his roles as the former
-                President of the Greater Woodbury Chamber of Commerce, current Board Member of the Harbaugh House,
-                and Board Member of Gloucester County Habitat for Humanity. His commitment to helping families extends
-                from providing toys and transitional housing to creating pathways to homeownership.
+                The journey began in late 2020 with "Walkin' and Talkin' with Tim," where Tim conducted 
+                fun, informal interviews with local leaders, business owners, and influential community 
+                members. This initiative evolved into Walk the Talk with Tim, a 501(c)(3) nonprofit 
+                dedicated to supporting and empowering nonprofit organizations and individuals in need 
+                within our communities.
               </p>
               <p className="hover:text-black transition-colors duration-300">
-                Through Walk the Talk, we bring people together to support meaningful causes and create lasting change
-                in Southern New Jersey and the Greater Philadelphia area.
+                Tim's dedication to community service is reflected in his roles as the former President 
+                of the Greater Woodbury Chamber of Commerce and current Board Member of both the Harbaugh 
+                House and Gloucester County Habitat for Humanity. His commitment extends from providing 
+                toys and transitional housing to creating pathways to homeownership for local families.
+              </p>
+              <p className="hover:text-black transition-colors duration-300">
+                A proud resident of Gloucester County for over 40 years, Tim lives with his wife, Deb, 
+                and has raised two daughters, Sarah and Kristin. Through Walk the Talk, we continue to 
+                bring people together to support meaningful causes and create lasting change in Southern 
+                New Jersey and the Greater Philadelphia area.
               </p>
             </div>
             <div className="mt-8 text-center">

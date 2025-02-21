@@ -21,7 +21,7 @@ const Events = () => {
               <div className="absolute -left-11 top-0 w-8 h-8 rounded-full border-4 border-kelly-green bg-white"></div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-kelly-green">
                 <div className="bg-kelly-green text-white px-6 py-3">
-                  <span className="text-lg font-semibold">May 17th, 2024</span>
+                  <span className="text-lg font-semibold">May 17th, 2025</span>
                 </div>
                 <div className="p-6">
                   <h2 className="text-2xl font-bold text-gray-800 mb-4">3rd Annual 5K Walk</h2>
