@@ -197,6 +197,12 @@ function HomePage() {
               <div className="mt-4">
                 <p className="text-gray-400 hover:text-white transition-colors duration-300">Greater Philadelphia Area</p>
                 <p className="text-gray-400 hover:text-white transition-colors duration-300">Southern New Jersey</p>
+                <a 
+                  href="tel:+18568121222" 
+                  className="text-gray-400 hover:text-white transition-colors duration-300 block mt-2"
+                >
+                  (856) 812-1222
+                </a>
               </div>
             </div>
             <div className="md:text-right">
