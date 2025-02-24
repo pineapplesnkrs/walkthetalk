@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
-import logo from './assets/walk the walk.jpg'
 import zoomedLogo from './assets/zoomed.jpg'
 import facePic from './assets/face.jpg'
 import Events from './pages/Events'
@@ -109,7 +108,7 @@ function HomePage() {
       <div className="py-16 bg-gray-50">
         <div className="container-custom">
           <div className="grid md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature) => (
               <div 
                 key={feature.title}
                 className="text-center p-6 bg-white rounded-xl shadow-sm hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
@@ -179,7 +178,7 @@ function HomePage() {
         <div className="container-custom">
           <h2 className="text-3xl font-bold mb-12 text-center">Our Community Impact</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {impacts.map((impact, index) => (
+            {impacts.map((impact) => (
               <div 
                 key={impact.title}
                 className="bg-white p-6 rounded-lg shadow-sm hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
