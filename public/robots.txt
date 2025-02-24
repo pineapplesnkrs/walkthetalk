@@ -1,0 +1,17 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://walkthetalkwithtim.org/sitemap.xml
+
+# Common directories to disallow
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+Disallow: /admin/
+Disallow: /includes/
+Disallow: /assets/raw/
+
+# Crawl-delay for all bots
+Crawl-delay: 10 
