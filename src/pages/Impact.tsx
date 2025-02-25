@@ -1,17 +1,17 @@
 import React from 'react';
 
-const Events = () => {
+const Impact = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Banner */}
       <div className="bg-kelly-green text-white pt-28 pb-16">
         <div className="container-custom text-center">
-          <h1 className="text-5xl font-bold mb-4">Our Charity Walks</h1>
-          <p className="text-xl">Making strides for change in our community</p>
+          <h1 className="text-5xl font-bold mb-4">Our Community Impact</h1>
+          <p className="text-xl">Making lasting change in our community</p>
         </div>
       </div>
 
-      {/* Events Timeline */}
+      {/* Impact Timeline */}
       <div className="container-custom py-16">
         <div className="space-y-12">
           {/* Upcoming Event 2024 */}
@@ -32,7 +32,14 @@ const Events = () => {
                     hands-on experiences. Your participation helps provide fishing equipment, educational programs, 
                     and college scholarships to young outdoor enthusiasts.
                   </p>
-                  <button className="btn-primary">Register Now</button>
+                  <a 
+                    href="https://runsignup.com/Race/NJ/WestDeptford/WalktheTalk5K" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="btn-primary inline-block transform hover:scale-105 hover:shadow-lg transition-all duration-300"
+                  >
+                    Register Now
+                  </a>
                 </div>
               </div>
             </div>
@@ -94,4 +101,4 @@ const Events = () => {
   );
 };
 
-export default Events; 
+export default Impact; 

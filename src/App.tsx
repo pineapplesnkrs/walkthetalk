@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import zoomedLogo from './assets/zoomed.jpg'
 import facePic from './assets/face.jpg'
-import Events from './pages/Events'
+import bannerPic from './assets/picture banner.jpg'
+import Impact from './pages/Impact'
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -64,8 +65,8 @@ function App() {
               {/* Desktop menu */}
               <div className="hidden md:flex md:items-center md:space-x-8">
                 <Link to="/" className="text-gray-600 hover:text-kelly-green hover:-translate-y-1 transition-all duration-300">About</Link>
-                <Link to="/events" className="text-gray-600 hover:text-kelly-green hover:-translate-y-1 transition-all duration-300">Events</Link>
-                <Link to="/#impact" className="text-gray-600 hover:text-kelly-green hover:-translate-y-1 transition-all duration-300">Our Impact</Link>
+                <Link to="/#events" className="text-gray-600 hover:text-kelly-green hover:-translate-y-1 transition-all duration-300">Events</Link>
+                <Link to="/impact" className="text-gray-600 hover:text-kelly-green hover:-translate-y-1 transition-all duration-300">Our Impact</Link>
                 <Link to="/#contact" className="text-gray-600 hover:text-kelly-green hover:-translate-y-1 transition-all duration-300">Contact</Link>
                 <button className="btn-primary transform hover:scale-105 hover:shadow-lg transition-all duration-300">Donate</button>
               </div>
@@ -74,7 +75,7 @@ function App() {
         </nav>
 
         <Routes>
-          <Route path="/events" element={<Events />} />
+          <Route path="/impact" element={<Impact />} />
           <Route path="/" element={<HomePage />} />
         </Routes>
       </div>
@@ -97,9 +98,9 @@ function HomePage() {
             />
           </div>
           <h2 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">Making Strides for Change</h2>
-          <p className="text-xl mb-8 animate-fade-in-delay">Join us in our mission to make a difference in Southern New Jersey</p>
+          <p className="text-xl mb-8 animate-fade-in-delay">Join us in our mission to make a difference!</p>
           <button className="bg-white text-kelly-green px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors transform hover:scale-105 hover:shadow-xl transition-all duration-300">
-            Join Our Next Walk
+            Join Our Mailing List
           </button>
         </div>
       </div>
@@ -111,7 +112,8 @@ function HomePage() {
             {features.map((feature) => (
               <div 
                 key={feature.title}
-                className="text-center p-6 bg-white rounded-xl shadow-sm hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+                className={`text-center p-6 bg-white rounded-xl shadow-sm hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 ${feature.link ? 'cursor-pointer' : ''}`}
+                onClick={() => feature.link && window.open(feature.link, '_blank')}
               >
                 <div className="relative">
                   <svg 
@@ -125,6 +127,9 @@ function HomePage() {
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
+                {feature.link && (
+                  <div className="mt-4 text-kelly-green hover:underline">Click to register →</div>
+                )}
               </div>
             ))}
           </div>
@@ -153,9 +158,10 @@ function HomePage() {
               </p>
               <p className="hover:text-black transition-colors duration-300">
                 Tim's dedication to community service is reflected in his roles as the former President 
-                of the Greater Woodbury Chamber of Commerce and current Board Member of both the Harbaugh 
-                House and Gloucester County Habitat for Humanity. His commitment extends from providing 
-                toys and transitional housing to creating pathways to homeownership for local families.
+                of the Greater Woodbury Chamber of Commerce and current Board Member of both the Nor'Easter 
+                Nick's Rainy Day Project and Gloucester County Habitat for Humanity. His commitment extends 
+                from providing toys and transitional housing to creating pathways to homeownership for local 
+                families.
               </p>
               <p className="hover:text-black transition-colors duration-300">
                 A proud resident of Gloucester County for over 40 years, Tim lives with his wife, Deb, 
@@ -164,10 +170,114 @@ function HomePage() {
                 New Jersey and the Greater Philadelphia area.
               </p>
             </div>
-            <div className="mt-8 text-center">
-              <button className="btn-primary transform hover:scale-105 hover:shadow-lg transition-all duration-300">
-                Learn More About Our Mission
-              </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Banner Image Section */}
+      <div className="py-16 bg-gray-50">
+        <div className="container-custom">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold mb-8 text-center">It All Started with a Walk</h2>
+            <img 
+              src={bannerPic} 
+              alt="Walk the Talk Banner" 
+              className="w-full h-auto rounded-lg shadow-lg object-cover transform hover:scale-105 transition-transform duration-500 hover:shadow-2xl mb-12" 
+            />
+            
+            {/* Video Grid */}
+            <div className="grid md:grid-cols-3 gap-6">
+              {/* Video 1 */}
+              <div 
+                onClick={() => window.open('https://www.youtube.com/watch?v=K0PgL00zr_Y', '_blank')}
+                className="cursor-pointer transform hover:scale-105 transition-all duration-300"
+              >
+                <div className="relative">
+                  <img 
+                    src={`https://img.youtube.com/vi/K0PgL00zr_Y/hqdefault.jpg`}
+                    alt="Walk the Talk Video 1"
+                    className="w-full h-48 object-cover rounded-lg shadow-md"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-12 h-12 bg-kelly-green rounded-full flex items-center justify-center">
+                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Video 2 */}
+              <div 
+                onClick={() => window.open('https://www.youtube.com/watch?v=2NXQbpR4Vn8', '_blank')}
+                className="cursor-pointer transform hover:scale-105 transition-all duration-300"
+              >
+                <div className="relative">
+                  <img 
+                    src={`https://img.youtube.com/vi/2NXQbpR4Vn8/hqdefault.jpg`}
+                    alt="Walk the Talk Video 2"
+                    className="w-full h-48 object-cover rounded-lg shadow-md"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-12 h-12 bg-kelly-green rounded-full flex items-center justify-center">
+                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Video 3 */}
+              <div 
+                onClick={() => window.open('https://www.youtube.com/watch?v=Ena9TzqlH94', '_blank')}
+                className="cursor-pointer transform hover:scale-105 transition-all duration-300"
+              >
+                <div className="relative">
+                  <img 
+                    src={`https://img.youtube.com/vi/Ena9TzqlH94/hqdefault.jpg`}
+                    alt="Walk the Talk Video 3"
+                    className="w-full h-48 object-cover rounded-lg shadow-md"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-12 h-12 bg-kelly-green rounded-full flex items-center justify-center">
+                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Events Section */}
+      <div id="events" className="py-16">
+        <div className="container-custom">
+          <h2 className="text-3xl font-bold mb-12 text-center">Upcoming Events</h2>
+          <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+            <div className="bg-kelly-green text-white p-6">
+              <h3 className="text-2xl font-bold">3rd Annual Walk the Talk 5K & 1 Mile Walk</h3>
+              <p className="text-lg mt-2">May 17th, 2025</p>
+            </div>
+            <div className="p-6">
+              <p className="text-gray-600 mb-6">
+                Join us for our next community walk benefiting The Ike Foundation®, a non-profit organization 
+                dedicated to connecting underserved youth with fishing and outdoor activities. Your participation 
+                helps provide fishing equipment, educational programs, and college scholarships to young outdoor 
+                enthusiasts.
+              </p>
+              <a 
+                href="https://runsignup.com/Race/NJ/WestDeptford/WalktheTalk5K" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn-primary inline-block transform hover:scale-105 hover:shadow-lg transition-all duration-300"
+              >
+                Register Now
+              </a>
             </div>
           </div>
         </div>
@@ -225,9 +335,14 @@ function HomePage() {
             <div className="md:text-right">
               <h4 className="font-semibold mb-4">Get Involved</h4>
               <div className="space-y-2">
-                <p className="text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer">
+                <a 
+                  href="https://runsignup.com/Race/NJ/WestDeptford/WalktheTalk5K"
+                  target="_blank"
+                  rel="noopener noreferrer" 
+                  className="text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer block"
+                >
                   Join our next charity walk
-                </p>
+                </a>
                 <p className="text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer">
                   Volunteer opportunities
                 </p>
@@ -252,13 +367,14 @@ function HomePage() {
 const features = [
   {
     title: "Community Events",
-    description: "Building stronger communities through charity walks and community engagement",
+    description: "Building stronger communities through community engagement",
     icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
   },
   {
-    title: "Greater Philadelphia Area",
-    description: "Serving Southern New Jersey and the Greater Philadelphia region",
-    icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+    title: "Walk The Talk 5K & 1 Mile Walk",
+    description: "Sign up here!",
+    link: "https://runsignup.com/Race/NJ/WestDeptford/WalktheTalk5K",
+    icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
   },
   {
     title: "Making an Impact",
@@ -269,8 +385,8 @@ const features = [
 
 const impacts = [
   {
-    title: "Harbaugh House Partnership",
-    description: "Working alongside the Harbaugh House to provide toys to children and support families with transitional housing needs throughout the year."
+    title: "Nor'Easter Nick's Rainy Day Project",
+    description: "Supporting a vital organization that connects South Jersey families with basic human needs, providing emergency housing assistance, utility bill help, disaster relief, and holiday meal assistance through ShopRite gift cards."
   },
   {
     title: "Habitat for Humanity",
