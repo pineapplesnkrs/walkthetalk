@@ -354,7 +354,7 @@ function HomePage() {
             <img 
               src={zoomedLogo} 
               alt="Walk the Talk Hero" 
-              className="h-64 w-auto object-contain rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-500 hover:shadow-2xl" 
+              className="h-64 w-auto object-contain rounded-lg transform hover:scale-105 transition-transform duration-500" 
             />
           </div>
           <h2 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">Making Strides for Change</h2>
