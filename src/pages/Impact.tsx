@@ -2,7 +2,7 @@ const Impact = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Banner */}
-      <div className="bg-kelly-green text-white pt-28 pb-16">
+      <div className="bg-accent-color text-white pt-28 pb-16">
         <div className="container-custom text-center">
           <h1 className="text-5xl font-bold mb-4">Our Community Impact</h1>
           <p className="text-xl">Making lasting change in our community</p>
@@ -34,7 +34,7 @@ const Impact = () => {
                     href="https://runsignup.com/Race/NJ/WestDeptford/WalktheTalk5K" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="btn-primary inline-block transform hover:scale-105 hover:shadow-lg transition-all duration-300"
+                    className="btn-kelly inline-block transform hover:scale-105 hover:shadow-lg transition-all duration-300"
                   >
                     Register Now
                   </a>

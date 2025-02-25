@@ -7,7 +7,9 @@ export default {
   theme: {
     extend: {
       colors: {
+        'accent-color': '#F74902',
         'kelly-green': '#046A38',
+        'gray-color': '#252726',
       },
     },
   },

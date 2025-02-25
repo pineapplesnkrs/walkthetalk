@@ -69,7 +69,7 @@ function AppContent() {
                 <img 
                   src={facePic} 
                   alt="Tim Jennings" 
-                  className="h-16 w-16 object-cover rounded-lg border-2 border-kelly-green hover:border-4 transition-all duration-300" 
+                  className="h-16 w-16 object-cover rounded-lg border-2 border-accent-color hover:border-4 transition-all duration-300" 
                 />
               </Link>
               <Link
@@ -89,7 +89,7 @@ function AppContent() {
                     });
                   }
                 }}
-                className="text-2xl font-bold text-kelly-green hover:text-black transition-colors duration-300 cursor-pointer"
+                className="text-2xl font-bold text-accent-color hover:text-black transition-colors duration-300 cursor-pointer"
               >
                 Walk the Talk with Tim
               </Link>
@@ -99,7 +99,7 @@ function AppContent() {
             <div className="md:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-gray-500 hover:text-kelly-green transition-colors duration-300"
+                className="text-gray-500 hover:text-accent-color transition-colors duration-300"
               >
                 <span className="sr-only">Open menu</span>
                 <svg
@@ -151,7 +151,7 @@ function AppContent() {
                     }
                   }
                 }}
-                className="text-gray-600 hover:text-kelly-green hover:-translate-y-1 transition-all duration-300"
+                className="text-gray-600 hover:text-accent-color hover:-translate-y-1 transition-all duration-300"
               >
                 About
               </Link>
@@ -186,21 +186,21 @@ function AppContent() {
                     }
                   }
                 }}
-                className="text-gray-600 hover:text-kelly-green hover:-translate-y-1 transition-all duration-300"
+                className="text-gray-600 hover:text-accent-color hover:-translate-y-1 transition-all duration-300"
               >
                 Events
               </Link>
               <Link 
                 to="/impact" 
                 onClick={() => window.scrollTo(0, 0)} 
-                className="text-gray-600 hover:text-kelly-green hover:-translate-y-1 transition-all duration-300"
+                className="text-gray-600 hover:text-accent-color hover:-translate-y-1 transition-all duration-300"
               >
                 Our Impact
               </Link>
               <Link 
                 to="/contact" 
                 onClick={() => window.scrollTo(0, 0)} 
-                className="text-gray-600 hover:text-kelly-green hover:-translate-y-1 transition-all duration-300"
+                className="text-gray-600 hover:text-accent-color hover:-translate-y-1 transition-all duration-300"
               >
                 Contact
               </Link>
@@ -252,7 +252,7 @@ function AppContent() {
                     }
                   }
                 }}
-                className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-kelly-green hover:bg-gray-50 rounded-md"
+                className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-accent-color hover:bg-gray-50 rounded-md"
               >
                 About
               </Link>
@@ -288,7 +288,7 @@ function AppContent() {
                     }
                   }
                 }}
-                className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-kelly-green hover:bg-gray-50 rounded-md"
+                className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-accent-color hover:bg-gray-50 rounded-md"
               >
                 Events
               </Link>
@@ -298,7 +298,7 @@ function AppContent() {
                   setIsMenuOpen(false);
                   window.scrollTo(0, 0);
                 }}
-                className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-kelly-green hover:bg-gray-50 rounded-md"
+                className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-accent-color hover:bg-gray-50 rounded-md"
               >
                 Our Impact
               </Link>
@@ -308,7 +308,7 @@ function AppContent() {
                   setIsMenuOpen(false);
                   window.scrollTo(0, 0);
                 }}
-                className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-kelly-green hover:bg-gray-50 rounded-md"
+                className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-accent-color hover:bg-gray-50 rounded-md"
               >
                 Contact
               </Link>
@@ -317,7 +317,7 @@ function AppContent() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsMenuOpen(false)}
-                className="block px-3 py-2 text-base font-medium text-kelly-green hover:bg-kelly-green hover:text-white rounded-md transition-colors duration-300"
+                className="block px-3 py-2 text-base font-medium text-accent-color hover:bg-accent-color hover:text-white rounded-md transition-colors duration-300"
               >
                 Donate
               </a>
@@ -348,7 +348,7 @@ function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <div className="bg-kelly-green text-white pt-28 pb-20">
+      <div className="bg-gray-color text-white pt-28 pb-20">
         <div className="container-custom text-center">
           <div className="flex justify-center mb-8">
             <img 
@@ -358,8 +358,7 @@ function HomePage() {
             />
           </div>
           <h2 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">Making Strides for Change</h2>
-          <p className="text-xl mb-8 animate-fade-in-delay">Join us in our mission to make a difference!</p>
-          <button className="bg-white text-kelly-green px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors transform hover:scale-105 hover:shadow-xl transition-all duration-300">
+          <button className="bg-white text-accent-color px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors transform hover:scale-105 hover:shadow-xl transition-all duration-300">
             Join Our Mailing List
           </button>
         </div>
@@ -377,7 +376,7 @@ function HomePage() {
               >
                 <div className="relative">
                   <svg 
-                    className="h-12 w-12 text-kelly-green mx-auto mb-4 transform hover:rotate-12 transition-transform duration-300" 
+                    className="h-12 w-12 text-accent-color mx-auto mb-4 transform hover:rotate-12 transition-transform duration-300" 
                     fill="none" 
                     viewBox="0 0 24 24" 
                     stroke="currentColor"
@@ -388,7 +387,7 @@ function HomePage() {
                 <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
                 {feature.link && (
-                  <div className="mt-4 text-kelly-green hover:underline">Click to register →</div>
+                  <div className="mt-4 text-accent-color hover:underline">Click to register →</div>
                 )}
               </div>
             ))}
@@ -396,8 +395,115 @@ function HomePage() {
         </div>
       </div>
 
+      {/* Banner Image Section */}
+      <div className="py-16">
+        <div className="container-custom">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold mb-8 text-center">It All Started with a Walk</h2>
+            <img 
+              src={bannerPic} 
+              alt="Walk the Talk Banner" 
+              className="w-full h-auto rounded-lg shadow-lg object-cover transform hover:scale-105 transition-transform duration-500 hover:shadow-2xl mb-12" 
+            />
+            
+            {/* Video Grid */}
+            <div className="grid md:grid-cols-3 gap-6">
+              {/* Video 1 */}
+              <div 
+                onClick={() => window.open('https://www.youtube.com/watch?v=K0PgL00zr_Y', '_blank')}
+                className="cursor-pointer transform hover:scale-105 transition-all duration-300"
+              >
+                <div className="relative">
+                  <img 
+                    src={`https://img.youtube.com/vi/K0PgL00zr_Y/hqdefault.jpg`}
+                    alt="Walk the Talk Video 1"
+                    className="w-full h-48 object-cover rounded-lg shadow-md"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-12 h-12 bg-accent-color rounded-full flex items-center justify-center">
+                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Video 2 */}
+              <div 
+                onClick={() => window.open('https://www.youtube.com/watch?v=2NXQbpR4Vn8', '_blank')}
+                className="cursor-pointer transform hover:scale-105 transition-all duration-300"
+              >
+                <div className="relative">
+                  <img 
+                    src={`https://img.youtube.com/vi/2NXQbpR4Vn8/hqdefault.jpg`}
+                    alt="Walk the Talk Video 2"
+                    className="w-full h-48 object-cover rounded-lg shadow-md"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-12 h-12 bg-accent-color rounded-full flex items-center justify-center">
+                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Video 3 */}
+              <div 
+                onClick={() => window.open('https://www.youtube.com/watch?v=Ena9TzqlH94', '_blank')}
+                className="cursor-pointer transform hover:scale-105 transition-all duration-300"
+              >
+                <div className="relative">
+                  <img 
+                    src={`https://img.youtube.com/vi/Ena9TzqlH94/hqdefault.jpg`}
+                    alt="Walk the Talk Video 3"
+                    className="w-full h-48 object-cover rounded-lg shadow-md"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-12 h-12 bg-accent-color rounded-full flex items-center justify-center">
+                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* YouTube Channel Link */}
+            <div className="text-center mt-8">
+              <a 
+                href="https://www.youtube.com/@walkintalkinwithtim9154" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-accent-color hover:text-black transition-colors duration-300 group"
+              >
+                <svg 
+                  className="w-6 h-6 mr-2 group-hover:scale-110 transition-transform duration-300" 
+                  fill="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                </svg>
+                <span className="text-lg font-medium">Watch More Episodes on YouTube</span>
+                <svg 
+                  className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" 
+                  fill="none" 
+                  viewBox="0 0 24 24" 
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* About Section */}
-      <div id="about" className="py-16">
+      <div id="about" className="py-16 bg-gray-50">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-6 text-center">About Walk the Talk with Tim</h2>
@@ -433,113 +539,6 @@ function HomePage() {
         </div>
       </div>
 
-      {/* Banner Image Section */}
-      <div className="py-16 bg-gray-50">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">It All Started with a Walk</h2>
-            <img 
-              src={bannerPic} 
-              alt="Walk the Talk Banner" 
-              className="w-full h-auto rounded-lg shadow-lg object-cover transform hover:scale-105 transition-transform duration-500 hover:shadow-2xl mb-12" 
-            />
-            
-            {/* Video Grid */}
-            <div className="grid md:grid-cols-3 gap-6">
-              {/* Video 1 */}
-              <div 
-                onClick={() => window.open('https://www.youtube.com/watch?v=K0PgL00zr_Y', '_blank')}
-                className="cursor-pointer transform hover:scale-105 transition-all duration-300"
-              >
-                <div className="relative">
-                  <img 
-                    src={`https://img.youtube.com/vi/K0PgL00zr_Y/hqdefault.jpg`}
-                    alt="Walk the Talk Video 1"
-                    className="w-full h-48 object-cover rounded-lg shadow-md"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-12 h-12 bg-kelly-green rounded-full flex items-center justify-center">
-                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Video 2 */}
-              <div 
-                onClick={() => window.open('https://www.youtube.com/watch?v=2NXQbpR4Vn8', '_blank')}
-                className="cursor-pointer transform hover:scale-105 transition-all duration-300"
-              >
-                <div className="relative">
-                  <img 
-                    src={`https://img.youtube.com/vi/2NXQbpR4Vn8/hqdefault.jpg`}
-                    alt="Walk the Talk Video 2"
-                    className="w-full h-48 object-cover rounded-lg shadow-md"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-12 h-12 bg-kelly-green rounded-full flex items-center justify-center">
-                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Video 3 */}
-              <div 
-                onClick={() => window.open('https://www.youtube.com/watch?v=Ena9TzqlH94', '_blank')}
-                className="cursor-pointer transform hover:scale-105 transition-all duration-300"
-              >
-                <div className="relative">
-                  <img 
-                    src={`https://img.youtube.com/vi/Ena9TzqlH94/hqdefault.jpg`}
-                    alt="Walk the Talk Video 3"
-                    className="w-full h-48 object-cover rounded-lg shadow-md"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-12 h-12 bg-kelly-green rounded-full flex items-center justify-center">
-                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            {/* YouTube Channel Link */}
-            <div className="text-center mt-8">
-              <a 
-                href="https://www.youtube.com/@walkintalkinwithtim9154" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-kelly-green hover:text-black transition-colors duration-300 group"
-              >
-                <svg 
-                  className="w-6 h-6 mr-2 group-hover:scale-110 transition-transform duration-300" 
-                  fill="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
-                </svg>
-                <span className="text-lg font-medium">Watch More Episodes on YouTube</span>
-                <svg 
-                  className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" 
-                  fill="none" 
-                  viewBox="0 0 24 24" 
-                  stroke="currentColor"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Events Section */}
       <div id="events" className="py-16">
         <div className="container-custom">
@@ -560,7 +559,7 @@ function HomePage() {
                 href="https://runsignup.com/Race/NJ/WestDeptford/WalktheTalk5K" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="btn-primary inline-block transform hover:scale-105 hover:shadow-lg transition-all duration-300"
+                className="btn-kelly inline-block transform hover:scale-105 hover:shadow-lg transition-all duration-300"
               >
                 Register Now
               </a>
@@ -579,7 +578,7 @@ function HomePage() {
                 key={impact.title}
                 className="bg-white p-6 rounded-lg shadow-sm hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
               >
-                <h3 className="text-xl font-semibold mb-4 text-kelly-green">{impact.title}</h3>
+                <h3 className="text-xl font-semibold mb-4 text-accent-color">{impact.title}</h3>
                 <p className="text-gray-600 hover:text-black transition-colors duration-300">
                   {impact.description}
                 </p>
@@ -590,11 +589,11 @@ function HomePage() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-gray-color text-white py-12">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-2xl font-bold mb-4 hover:text-kelly-green transition-colors duration-300">
+              <h3 className="text-2xl font-bold mb-4 hover:text-accent-color transition-colors duration-300">
                 Walk the Talk with Tim
               </h3>
               <p className="text-gray-400 hover:text-white transition-colors duration-300">

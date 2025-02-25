@@ -37,13 +37,13 @@ const Contact = () => {
                 className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-6 flex flex-col"
               >
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-kelly-green mb-2">{member.name}</h3>
+                  <h3 className="text-xl font-semibold text-accent-color mb-2">{member.name}</h3>
                   <p className="text-gray-500 font-medium mb-3">{member.role}</p>
                   <p className="text-gray-600 mb-4 text-sm h-24">{member.description}</p>
                 </div>
                 <a 
                   href={`mailto:${member.email}`}
-                  className="inline-flex items-center text-kelly-green hover:text-black transition-colors duration-300 mt-auto"
+                  className="inline-flex items-center text-accent-color hover:text-black transition-colors duration-300 mt-auto"
                 >
                   <svg 
                     className="w-5 h-5 mr-2 flex-shrink-0" 
@@ -74,7 +74,7 @@ const Contact = () => {
                   href="https://maps.google.com/?q=1535+Gateway+Blvd,+Woodbury,+NJ+08096"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-kelly-green transition-colors duration-300"
+                  className="text-gray-600 hover:text-accent-color transition-colors duration-300"
                 >
                   1535 Gateway Blvd<br />
                   Woodbury, NJ 08096
@@ -84,7 +84,7 @@ const Contact = () => {
                 <h3 className="font-semibold mb-3">Phone</h3>
                 <a 
                   href="tel:+18568121222"
-                  className="text-gray-600 hover:text-kelly-green transition-colors duration-300"
+                  className="text-gray-600 hover:text-accent-color transition-colors duration-300"
                 >
                   (856) 812-1222
                 </a>
