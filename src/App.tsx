@@ -215,6 +215,115 @@ function AppContent() {
             </div>
           </div>
         </div>
+
+        {/* Mobile menu */}
+        {isMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-4 pt-2 pb-3 space-y-2 bg-white border-t">
+              <Link 
+                to="/#about" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMenuOpen(false);
+                  if (location.pathname !== '/') {
+                    navigate('/');
+                    setTimeout(() => {
+                      const aboutSection = document.getElementById('about');
+                      if (aboutSection) {
+                        const headerOffset = 100;
+                        const elementPosition = aboutSection.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        window.scrollTo({
+                          top: offsetPosition,
+                          behavior: 'smooth'
+                        });
+                      }
+                    }, 0);
+                  } else {
+                    const aboutSection = document.getElementById('about');
+                    if (aboutSection) {
+                      const headerOffset = 100;
+                      const elementPosition = aboutSection.getBoundingClientRect().top;
+                      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                      window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                      });
+                    }
+                  }
+                }}
+                className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-kelly-green hover:bg-gray-50 rounded-md"
+              >
+                About
+              </Link>
+              <Link 
+                to="/#events" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMenuOpen(false);
+                  if (location.pathname !== '/') {
+                    navigate('/');
+                    setTimeout(() => {
+                      const eventsSection = document.getElementById('events');
+                      if (eventsSection) {
+                        const headerOffset = 100;
+                        const elementPosition = eventsSection.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        window.scrollTo({
+                          top: offsetPosition,
+                          behavior: 'smooth'
+                        });
+                      }
+                    }, 0);
+                  } else {
+                    const eventsSection = document.getElementById('events');
+                    if (eventsSection) {
+                      const headerOffset = 100;
+                      const elementPosition = eventsSection.getBoundingClientRect().top;
+                      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                      window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                      });
+                    }
+                  }
+                }}
+                className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-kelly-green hover:bg-gray-50 rounded-md"
+              >
+                Events
+              </Link>
+              <Link 
+                to="/impact" 
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  window.scrollTo(0, 0);
+                }}
+                className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-kelly-green hover:bg-gray-50 rounded-md"
+              >
+                Our Impact
+              </Link>
+              <Link 
+                to="/contact" 
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  window.scrollTo(0, 0);
+                }}
+                className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-kelly-green hover:bg-gray-50 rounded-md"
+              >
+                Contact
+              </Link>
+              <a 
+                href="https://runsignup.com/Race/Donate/NJ/WestDeptford/WalktheTalk5K"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMenuOpen(false)}
+                className="block px-3 py-2 text-base font-medium text-kelly-green hover:bg-kelly-green hover:text-white rounded-md transition-colors duration-300"
+              >
+                Donate
+              </a>
+            </div>
+          </div>
+        )}
       </nav>
 
       <Routes>
