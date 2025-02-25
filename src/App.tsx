@@ -38,19 +38,6 @@ function AppContent() {
     }
   }, [location]);
 
-  // Add ScrollToTop component
-  function ScrollToTop() {
-    const { pathname } = useLocation();
-  
-    useEffect(() => {
-      if (!pathname.includes('#')) {
-        window.scrollTo(0, 0);
-      }
-    }, [pathname]);
-  
-    return null;
-  }
-
   return (
     <div className="min-h-screen">
       {/* Navigation */}
@@ -138,7 +125,19 @@ function AppContent() {
                 onClick={(e) => {
                   e.preventDefault();
                   if (location.pathname !== '/') {
-                    navigate('/#about');
+                    navigate('/');
+                    setTimeout(() => {
+                      const aboutSection = document.getElementById('about');
+                      if (aboutSection) {
+                        const headerOffset = 100;
+                        const elementPosition = aboutSection.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        window.scrollTo({
+                          top: offsetPosition,
+                          behavior: 'smooth'
+                        });
+                      }
+                    }, 0);
                   } else {
                     const aboutSection = document.getElementById('about');
                     if (aboutSection) {
@@ -161,7 +160,19 @@ function AppContent() {
                 onClick={(e) => {
                   e.preventDefault();
                   if (location.pathname !== '/') {
-                    navigate('/#events');
+                    navigate('/');
+                    setTimeout(() => {
+                      const eventsSection = document.getElementById('events');
+                      if (eventsSection) {
+                        const headerOffset = 100;
+                        const elementPosition = eventsSection.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        window.scrollTo({
+                          top: offsetPosition,
+                          behavior: 'smooth'
+                        });
+                      }
+                    }, 0);
                   } else {
                     const eventsSection = document.getElementById('events');
                     if (eventsSection) {
@@ -516,9 +527,13 @@ function HomePage() {
                   Partner with us
                 </p>
               </div>
-              <button className="btn-primary mt-4 transform hover:scale-105 hover:shadow-lg transition-all duration-300">
+              <Link 
+                to="/contact" 
+                onClick={() => window.scrollTo(0, 0)}
+                className="btn-primary mt-4 transform hover:scale-105 hover:shadow-lg transition-all duration-300 inline-block"
+              >
                 Contact Us
-              </button>
+              </Link>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
