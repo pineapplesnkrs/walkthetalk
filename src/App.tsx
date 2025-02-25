@@ -160,14 +160,13 @@ function HomePage() {
                 Tim's dedication to community service is reflected in his roles as the former President 
                 of the Greater Woodbury Chamber of Commerce and current Board Member of both the Nor'Easter 
                 Nick's Rainy Day Project and Gloucester County Habitat for Humanity. His commitment extends 
-                from providing toys and transitional housing to creating pathways to homeownership for local 
+                from providing toys and transitional housing to creating pathways to homeownership for 
                 families.
               </p>
               <p className="hover:text-black transition-colors duration-300">
                 A proud resident of Gloucester County for over 40 years, Tim lives with his wife, Deb, 
                 and has raised two daughters, Sarah and Kristin. Through Walk the Talk, we continue to 
-                bring people together to support meaningful causes and create lasting change in Southern 
-                New Jersey and the Greater Philadelphia area.
+                bring people together to support meaningful causes and create lasting change in our communities.
               </p>
             </div>
           </div>
@@ -249,6 +248,33 @@ function HomePage() {
                   </div>
                 </div>
               </div>
+            </div>
+            
+            {/* YouTube Channel Link */}
+            <div className="text-center mt-8">
+              <a 
+                href="https://www.youtube.com/@walkintalkinwithtim9154" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-kelly-green hover:text-black transition-colors duration-300 group"
+              >
+                <svg 
+                  className="w-6 h-6 mr-2 group-hover:scale-110 transition-transform duration-300" 
+                  fill="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                </svg>
+                <span className="text-lg font-medium">Watch More Episodes on YouTube</span>
+                <svg 
+                  className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" 
+                  fill="none" 
+                  viewBox="0 0 24 24" 
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
             </div>
           </div>
         </div>
@@ -378,7 +404,7 @@ const features = [
   },
   {
     title: "Making an Impact",
-    description: "Supporting local families and charitable organizations",
+    description: "Supporting families and charitable organizations",
     icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
   }
 ];
