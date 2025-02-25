@@ -1,14 +1,16 @@
 import { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom'
 import zoomedLogo from './assets/zoomed.jpg'
 import facePic from './assets/face.jpg'
 import bannerPic from './assets/picture banner.jpg'
 import Impact from './pages/Impact'
 import Contact from './pages/Contact'
 
-function App() {
+function AppContent() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,71 +20,207 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  return (
-    <Router>
-      <div className="min-h-screen">
-        {/* Navigation */}
-        <nav className={`fixed w-full z-50 transition-all duration-300 ${
-          scrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-white shadow-sm'
-        }`}>
-          <div className="container-custom">
-            <div className="flex items-center justify-between h-20">
-              <div className="flex items-center space-x-4">
-                <Link to="/" className="transform hover:scale-105 transition-transform duration-300">
-                  <img 
-                    src={facePic} 
-                    alt="Tim Jennings" 
-                    className="h-16 w-16 object-cover rounded-lg border-2 border-kelly-green hover:border-4 transition-all duration-300" 
-                  />
-                </Link>
-                <h1 className="text-2xl font-bold text-kelly-green hover:text-black transition-colors duration-300">
-                  Walk the Talk with Tim
-                </h1>
-              </div>
-              
-              {/* Mobile menu button */}
-              <div className="md:hidden">
-                <button
-                  onClick={() => setIsMenuOpen(!isMenuOpen)}
-                  className="text-gray-500 hover:text-kelly-green transition-colors duration-300"
-                >
-                  <span className="sr-only">Open menu</span>
-                  <svg
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
-                    />
-                  </svg>
-                </button>
-              </div>
+  // Handle scroll to section after navigation
+  useEffect(() => {
+    if (location.pathname === '/' && location.hash) {
+      setTimeout(() => {
+        const element = document.getElementById(location.hash.slice(1));
+        if (element) {
+          const headerOffset = 100;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }, 0);
+    }
+  }, [location]);
 
-              {/* Desktop menu */}
-              <div className="hidden md:flex md:items-center md:space-x-8">
-                <Link to="/" className="text-gray-600 hover:text-kelly-green hover:-translate-y-1 transition-all duration-300">About</Link>
-                <Link to="/#events" className="text-gray-600 hover:text-kelly-green hover:-translate-y-1 transition-all duration-300">Events</Link>
-                <Link to="/impact" className="text-gray-600 hover:text-kelly-green hover:-translate-y-1 transition-all duration-300">Our Impact</Link>
-                <Link to="/contact" className="text-gray-600 hover:text-kelly-green hover:-translate-y-1 transition-all duration-300">Contact</Link>
-                <button className="btn-primary transform hover:scale-105 hover:shadow-lg transition-all duration-300">Donate</button>
-              </div>
+  // Add ScrollToTop component
+  function ScrollToTop() {
+    const { pathname } = useLocation();
+  
+    useEffect(() => {
+      if (!pathname.includes('#')) {
+        window.scrollTo(0, 0);
+      }
+    }, [pathname]);
+  
+    return null;
+  }
+
+  return (
+    <div className="min-h-screen">
+      {/* Navigation */}
+      <nav className={`fixed w-full z-50 transition-all duration-300 ${
+        scrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-white shadow-sm'
+      }`}>
+        <div className="container-custom">
+          <div className="flex items-center justify-between h-20">
+            <div className="flex items-center space-x-4">
+              <Link 
+                to="/" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (location.pathname !== '/') {
+                    navigate('/');
+                    window.scrollTo({
+                      top: 0,
+                      behavior: 'instant'
+                    });
+                  } else {
+                    window.scrollTo({
+                      top: 0,
+                      behavior: 'smooth'
+                    });
+                  }
+                }}
+                className="transform hover:scale-105 transition-transform duration-300"
+              >
+                <img 
+                  src={facePic} 
+                  alt="Tim Jennings" 
+                  className="h-16 w-16 object-cover rounded-lg border-2 border-kelly-green hover:border-4 transition-all duration-300" 
+                />
+              </Link>
+              <Link
+                to="/"
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (location.pathname !== '/') {
+                    navigate('/');
+                    window.scrollTo({
+                      top: 0,
+                      behavior: 'instant'
+                    });
+                  } else {
+                    window.scrollTo({
+                      top: 0,
+                      behavior: 'smooth'
+                    });
+                  }
+                }}
+                className="text-2xl font-bold text-kelly-green hover:text-black transition-colors duration-300 cursor-pointer"
+              >
+                Walk the Talk with Tim
+              </Link>
+            </div>
+            
+            {/* Mobile menu button */}
+            <div className="md:hidden">
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="text-gray-500 hover:text-kelly-green transition-colors duration-300"
+              >
+                <span className="sr-only">Open menu</span>
+                <svg
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+                  />
+                </svg>
+              </button>
+            </div>
+
+            {/* Desktop menu */}
+            <div className="hidden md:flex md:items-center md:space-x-8">
+              <Link 
+                to="/#about" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (location.pathname !== '/') {
+                    navigate('/#about');
+                  } else {
+                    const aboutSection = document.getElementById('about');
+                    if (aboutSection) {
+                      const headerOffset = 100;
+                      const elementPosition = aboutSection.getBoundingClientRect().top;
+                      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                      window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                      });
+                    }
+                  }
+                }}
+                className="text-gray-600 hover:text-kelly-green hover:-translate-y-1 transition-all duration-300"
+              >
+                About
+              </Link>
+              <Link 
+                to="/#events" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (location.pathname !== '/') {
+                    navigate('/#events');
+                  } else {
+                    const eventsSection = document.getElementById('events');
+                    if (eventsSection) {
+                      const headerOffset = 100;
+                      const elementPosition = eventsSection.getBoundingClientRect().top;
+                      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                      window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                      });
+                    }
+                  }
+                }}
+                className="text-gray-600 hover:text-kelly-green hover:-translate-y-1 transition-all duration-300"
+              >
+                Events
+              </Link>
+              <Link 
+                to="/impact" 
+                onClick={() => window.scrollTo(0, 0)} 
+                className="text-gray-600 hover:text-kelly-green hover:-translate-y-1 transition-all duration-300"
+              >
+                Our Impact
+              </Link>
+              <Link 
+                to="/contact" 
+                onClick={() => window.scrollTo(0, 0)} 
+                className="text-gray-600 hover:text-kelly-green hover:-translate-y-1 transition-all duration-300"
+              >
+                Contact
+              </Link>
+              <a 
+                href="https://runsignup.com/Race/Donate/NJ/WestDeptford/WalktheTalk5K"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary transform hover:scale-105 hover:shadow-lg transition-all duration-300"
+              >
+                Donate
+              </a>
             </div>
           </div>
-        </nav>
+        </div>
+      </nav>
 
-        <Routes>
-          <Route path="/impact" element={<Impact />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/" element={<HomePage />} />
-        </Routes>
-      </div>
-    </Router>
+      <Routes>
+        <Route path="/impact" element={<Impact />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+    </div>
   )
+}
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
+    </Router>
+  );
 }
 
 // HomePage component containing the main content
