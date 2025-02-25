@@ -4,6 +4,7 @@ import zoomedLogo from './assets/zoomed.jpg'
 import facePic from './assets/face.jpg'
 import bannerPic from './assets/picture banner.jpg'
 import Impact from './pages/Impact'
+import Contact from './pages/Contact'
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -67,7 +68,7 @@ function App() {
                 <Link to="/" className="text-gray-600 hover:text-kelly-green hover:-translate-y-1 transition-all duration-300">About</Link>
                 <Link to="/#events" className="text-gray-600 hover:text-kelly-green hover:-translate-y-1 transition-all duration-300">Events</Link>
                 <Link to="/impact" className="text-gray-600 hover:text-kelly-green hover:-translate-y-1 transition-all duration-300">Our Impact</Link>
-                <Link to="/#contact" className="text-gray-600 hover:text-kelly-green hover:-translate-y-1 transition-all duration-300">Contact</Link>
+                <Link to="/contact" className="text-gray-600 hover:text-kelly-green hover:-translate-y-1 transition-all duration-300">Contact</Link>
                 <button className="btn-primary transform hover:scale-105 hover:shadow-lg transition-all duration-300">Donate</button>
               </div>
             </div>
@@ -76,6 +77,7 @@ function App() {
 
         <Routes>
           <Route path="/impact" element={<Impact />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/" element={<HomePage />} />
         </Routes>
       </div>
