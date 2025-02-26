@@ -348,7 +348,7 @@ function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <div className="bg-gray-color text-white pt-28 pb-20">
+      <div className="bg-gray-color text-white pt-28 pb-16">
         <div className="container-custom text-center">
           <div className="flex justify-center mb-8">
             <img 
