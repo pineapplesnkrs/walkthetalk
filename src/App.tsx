@@ -546,7 +546,7 @@ function HomePage() {
           <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
             <div className="bg-kelly-green text-white p-6">
               <h3 className="text-2xl font-bold">3rd Annual Walk the Talk 5K & 1 Mile Walk</h3>
-              <p className="text-lg mt-2">May 31th, 2025</p>
+              <p className="text-lg mt-2">May 31st, 2025</p>
             </div>
             <div className="p-6">
               <p className="text-gray-600 mb-6">
