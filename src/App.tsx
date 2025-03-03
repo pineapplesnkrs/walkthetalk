@@ -5,6 +5,7 @@ import facePic from './assets/face.jpg'
 import bannerPic from './assets/picture banner.jpg'
 import Impact from './pages/Impact'
 import Contact from './pages/Contact'
+import MailingListSignup from './components/MailingListSignup'
 
 function AppContent() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -345,6 +346,8 @@ function App() {
 
 // HomePage component containing the main content
 function HomePage() {
+  const [isMailingListModalOpen, setIsMailingListModalOpen] = useState(false);
+
   return (
     <>
       {/* Hero Section */}
@@ -358,11 +361,20 @@ function HomePage() {
             />
           </div>
           <h2 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in" style={{ textShadow: '3.5px 2px 0 rgba(247, 73, 2, 0.9)' }}>Making Strides for Change</h2>
-          <button className="bg-white text-accent-color px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors transform hover:scale-105 hover:shadow-xl transition-all duration-300">
+          <button 
+            className="bg-white text-accent-color px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors transform hover:scale-105 hover:shadow-xl transition-all duration-300"
+            onClick={() => setIsMailingListModalOpen(true)}
+          >
             Join Our Mailing List
           </button>
         </div>
       </div>
+
+      {/* Mailing List Signup Modal */}
+      <MailingListSignup 
+        isOpen={isMailingListModalOpen} 
+        onClose={() => setIsMailingListModalOpen(false)} 
+      />
 
       {/* Features Section */}
       <div className="py-16 bg-gray-50">
