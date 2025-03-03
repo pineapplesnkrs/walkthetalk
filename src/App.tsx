@@ -628,12 +628,20 @@ function HomePage() {
                 >
                   Join our next charity walk
                 </a>
-                <p className="text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer">
+                <Link 
+                  to="/contact" 
+                  onClick={() => window.scrollTo(0, 0)}
+                  className="text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer block"
+                >
                   Volunteer opportunities
-                </p>
-                <p className="text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer">
+                </Link>
+                <Link 
+                  to="/contact" 
+                  onClick={() => window.scrollTo(0, 0)}
+                  className="text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer block"
+                >
                   Partner with us
-                </p>
+                </Link>
               </div>
               <Link 
                 to="/contact" 
