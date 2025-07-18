@@ -48,3 +48,49 @@ export default tseslint.config({
   },
 })
 ```
+
+## Constant Contact Integration
+
+This project includes integration with Constant Contact for managing the mailing list. To set up the integration:
+
+1. Create a Constant Contact account if you don't have one already.
+2. Create a sign-up form in your Constant Contact account and note the form ID.
+3. Update the form ID in the `MailingListSignup.tsx` component:
+
+```tsx
+window._ctct_m.push(['signUpFormWidget', { formId: 'YOUR_FORM_ID_HERE' }]);
+```
+
+Also update the form container div:
+
+```tsx
+<div className="ctct-form-embed form_id_YOUR_FORM_ID_HERE"></div>
+```
+
+### How It Works
+
+The "Join Our Mailing List" button on the homepage opens a modal that loads Constant Contact's embeddable form. When users enter their email address and submit the form, the data is sent directly to Constant Contact to add them to your mailing list.
+
+### Running the Application
+
+To run the application:
+
+1. Install dependencies:
+   ```
+   npm install
+   ```
+
+2. Start the development server:
+   ```
+   npm run dev
+   ```
+
+3. For production, build the application:
+   ```
+   npm run build
+   ```
+
+4. Serve the built application:
+   ```
+   npm run preview
+   ```

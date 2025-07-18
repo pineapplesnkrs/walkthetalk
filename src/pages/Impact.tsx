@@ -12,7 +12,7 @@ const Impact = () => {
       {/* Impact Timeline */}
       <div className="container-custom py-16">
         <div className="space-y-12">
-          {/* Upcoming Event 2024 */}
+          {/* Upcoming Event 2025 */}
           <div className="relative">
             <div className="absolute left-0 top-0 h-full w-1 bg-kelly-green"></div>
             <div className="relative ml-8">
@@ -23,21 +23,17 @@ const Impact = () => {
                 </div>
                 <div className="p-6">
                   <h2 className="text-2xl font-bold text-gray-800 mb-4">3rd Annual 5K Walk</h2>
-                  <p className="text-gray-600 mb-6">
-                    Join us for our next community walk benefiting The Ike Foundation®, a non-profit organization 
-                    dedicated to connecting underserved youth with fishing and outdoor activities. The foundation's 
-                    mission is to get urban and rural kids into the outdoors and foster a passion for nature through 
-                    hands-on experiences. Your participation helps provide fishing equipment, educational programs, 
-                    and college scholarships to young outdoor enthusiasts.
+                  <div className="bg-gray-50 rounded-lg p-4 mb-4 border-l-4 border-kelly-green">
+                    <p className="text-2xl font-bold text-kelly-green">$22,818 Raised</p>
+                    <p className="text-gray-600">for The Ike Foundation®</p>
+                  </div>
+                  <p className="text-gray-600">
+                    Supporting The Ike Foundation®, a non-profit organization dedicated to connecting underserved 
+                    youth with fishing and outdoor activities. The foundation's mission is to get urban and rural 
+                    kids into the outdoors and foster a passion for nature through hands-on experiences. The funds 
+                    raised help provide fishing equipment, educational programs, and college scholarships to young 
+                    outdoor enthusiasts.
                   </p>
-                  <a 
-                    href="https://runsignup.com/Race/NJ/WestDeptford/WalktheTalk5K" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="btn-kelly inline-block transform hover:scale-105 hover:shadow-lg transition-all duration-300"
-                  >
-                    Register Now
-                  </a>
                 </div>
               </div>
             </div>

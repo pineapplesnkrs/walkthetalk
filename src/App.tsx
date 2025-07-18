@@ -554,7 +554,7 @@ function HomePage() {
       {/* Events Section */}
       <div id="events" className="py-16">
         <div className="container-custom">
-          <h2 className="text-3xl font-bold mb-12 text-center">Upcoming Events</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">Recent Events</h2>
           <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
             <div className="bg-kelly-green text-white p-6">
               <h3 className="text-2xl font-bold">3rd Annual Walk the Talk 5K & 1 Mile Walk</h3>
@@ -573,7 +573,7 @@ function HomePage() {
                 rel="noopener noreferrer"
                 className="btn-kelly inline-block transform hover:scale-105 hover:shadow-lg transition-all duration-300"
               >
-                Register Now
+                Sign ups closed!
               </a>
             </div>
           </div>
@@ -681,7 +681,7 @@ const features = [
   },
   {
     title: "Walk The Talk 5K & 1 Mile Walk",
-    description: "Sign up here!",
+    description: "Sign ups closed!",
     link: "https://runsignup.com/Race/NJ/WestDeptford/WalktheTalk5K",
     icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
   },
