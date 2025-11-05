@@ -568,7 +568,7 @@ function HomePage() {
                 rel="noopener noreferrer"
                 className="bg-red-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-red-700 inline-block transform hover:scale-105 hover:shadow-lg transition-all duration-300"
               >
-                Join In Now - It's Free!
+                Sign Up Now - It's Free!
               </a>
             </div>
           </div>
