@@ -39,7 +39,7 @@ const Impact = () => {
 
           {/* 5K Walk Event 2025 */}
           <div className="relative">
-            <div className="absolute left-0 top-0 h-full w-1 bg-white"></div>
+            <div className="absolute left-0 top-0 h-full w-1 bg-gray-300"></div>
             <div className="relative ml-8">
               <div className="absolute -left-11 top-0 w-8 h-8 rounded-full border-4 border-kelly-green bg-white"></div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-kelly-green">
