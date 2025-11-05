@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom'
-import { Cookie } from 'lucide-react'
+import { Cookie, CalendarDays, HandHeart } from 'lucide-react'
 import zoomedLogo from './assets/zoomed.jpg'
 import facePic from './assets/face.jpg'
 import bannerPic from './assets/picture banner.jpg'
@@ -388,20 +388,9 @@ function HomePage() {
                 onClick={() => feature.link && window.open(feature.link, '_blank')}
               >
                 <div className="relative">
-                  {feature.icon.type === Cookie ? (
-                    <div className="text-accent-color mx-auto mb-4 transform hover:rotate-12 transition-transform duration-300 flex justify-center">
-                      {feature.icon}
-                    </div>
-                  ) : (
-                    <svg 
-                      className="h-12 w-12 text-accent-color mx-auto mb-4 transform hover:rotate-12 transition-transform duration-300" 
-                      fill="none" 
-                      viewBox="0 0 24 24" 
-                      stroke="currentColor"
-                    >
-                      {feature.icon}
-                    </svg>
-                  )}
+                  <div className="text-accent-color mx-auto mb-4 transform hover:rotate-12 transition-transform duration-300 flex justify-center">
+                    {feature.icon}
+                  </div>
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
@@ -683,7 +672,7 @@ const features = [
   {
     title: "Community Events",
     description: "Building stronger communities through community engagement",
-    icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+    icon: <CalendarDays className="h-12 w-12" />
   },
   {
     title: "Big Elfin Cookie Crumble - Cookie Contest",
@@ -694,7 +683,7 @@ const features = [
   {
     title: "Making an Impact",
     description: "Supporting families and charitable organizations",
-    icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+    icon: <HandHeart className="h-12 w-12" />
   }
 ];
 
