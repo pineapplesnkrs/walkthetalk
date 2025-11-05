@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom'
+import { Cookie } from 'lucide-react'
 import zoomedLogo from './assets/zoomed.jpg'
 import facePic from './assets/face.jpg'
 import bannerPic from './assets/picture banner.jpg'
@@ -387,19 +388,25 @@ function HomePage() {
                 onClick={() => feature.link && window.open(feature.link, '_blank')}
               >
                 <div className="relative">
-                  <svg 
-                    className="h-12 w-12 text-accent-color mx-auto mb-4 transform hover:rotate-12 transition-transform duration-300" 
-                    fill="none" 
-                    viewBox="0 0 24 24" 
-                    stroke="currentColor"
-                  >
-                    {feature.icon}
-                  </svg>
+                  {feature.icon.type === Cookie ? (
+                    <div className="text-accent-color mx-auto mb-4 transform hover:rotate-12 transition-transform duration-300 flex justify-center">
+                      {feature.icon}
+                    </div>
+                  ) : (
+                    <svg 
+                      className="h-12 w-12 text-accent-color mx-auto mb-4 transform hover:rotate-12 transition-transform duration-300" 
+                      fill="none" 
+                      viewBox="0 0 24 24" 
+                      stroke="currentColor"
+                    >
+                      {feature.icon}
+                    </svg>
+                  )}
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
                 {feature.link && (
-                  <div className="mt-4 text-accent-color hover:underline">Click to register →</div>
+                  <div className="mt-4 text-accent-color hover:underline">Click to join in →</div>
                 )}
               </div>
             ))}
@@ -556,24 +563,23 @@ function HomePage() {
         <div className="container-custom">
           <h2 className="text-3xl font-bold mb-12 text-center">Recent Events</h2>
           <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
-            <div className="bg-kelly-green text-white p-6">
-              <h3 className="text-2xl font-bold">3rd Annual Walk the Talk 5K & 1 Mile Walk</h3>
-              <p className="text-lg mt-2">May 31st, 2025</p>
+            <div className="bg-red-600 text-white p-6">
+              <h3 className="text-2xl font-bold">Big Elfin Cookie Crumble - Cookie Contest</h3>
+              <p className="text-lg mt-2">December 10th, 2025</p>
             </div>
             <div className="p-6">
               <p className="text-gray-600 mb-6">
-                Join us for our next community walk benefiting The Ike Foundation®, a non-profit organization 
-                dedicated to connecting underserved youth with fishing and outdoor activities. Your participation 
-                helps provide fishing equipment, educational programs, and college scholarships to young outdoor 
-                enthusiasts.
+                Come join us for a fun-filled day of delicious treats at the Big Elfin' Cookie Crumble - Cookie Contest! 
+                Get ready to taste some incredible holiday cookies and vote for your favorite. We'll have five special 
+                judges, twelve contestants, and a WHOLE LOTTA holiday fun!
               </p>
               <a 
-                href="https://runsignup.com/Race/NJ/WestDeptford/WalktheTalk5K" 
+                href="https://www.eventbrite.com/e/big-elfin-cookie-crumble-cookie-contest-tickets-1924363987489?aff=oddtdtcreator" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="btn-kelly inline-block transform hover:scale-105 hover:shadow-lg transition-all duration-300"
+                className="bg-red-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-red-700 inline-block transform hover:scale-105 hover:shadow-lg transition-all duration-300"
               >
-                Sign ups closed!
+                Join In Now - It's Free!
               </a>
             </div>
           </div>
@@ -680,10 +686,10 @@ const features = [
     icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
   },
   {
-    title: "Walk The Talk 5K & 1 Mile Walk",
-    description: "Sign ups closed!",
-    link: "https://runsignup.com/Race/NJ/WestDeptford/WalktheTalk5K",
-    icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+    title: "Big Elfin Cookie Crumble - Cookie Contest",
+    description: "Join us for holiday fun on December 10th!",
+    link: "https://www.eventbrite.com/e/big-elfin-cookie-crumble-cookie-contest-tickets-1924363987489?aff=oddtdtcreator",
+    icon: <Cookie className="h-12 w-12" />
   },
   {
     title: "Making an Impact",

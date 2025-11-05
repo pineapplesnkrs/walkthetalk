@@ -12,9 +12,34 @@ const Impact = () => {
       {/* Impact Timeline */}
       <div className="container-custom py-16">
         <div className="space-y-12">
-          {/* Upcoming Event 2025 */}
+          {/* Cookie Contest Event - December 2025 */}
           <div className="relative">
-            <div className="absolute left-0 top-0 h-full w-1 bg-kelly-green"></div>
+            <div className="absolute left-0 top-0 h-full w-1 bg-red-600"></div>
+            <div className="relative ml-8">
+              <div className="absolute -left-11 top-0 w-8 h-8 rounded-full border-4 border-red-600 bg-white"></div>
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-red-600">
+                <div className="bg-red-600 text-white px-6 py-3">
+                  <span className="text-lg font-semibold">December 10th, 2025</span>
+                </div>
+                <div className="p-6">
+                  <h2 className="text-2xl font-bold text-gray-800 mb-4">Big Elfin Cookie Crumble - Cookie Contest</h2>
+                  <div className="bg-gray-50 rounded-lg p-4 mb-4 border-l-4 border-red-600">
+                    <p className="text-2xl font-bold text-red-600">Community Event</p>
+                    <p className="text-gray-600">Holiday Fun & Cookie Contest</p>
+                  </div>
+                  <p className="text-gray-600">
+                    Come join us for a fun-filled day of delicious treats at the Big Elfin' Cookie Crumble - Cookie Contest! 
+                    Get ready to taste some incredible holiday cookies and vote for your favorite. We'll have five special 
+                    judges, twelve contestants, and a WHOLE LOTTA holiday fun!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 5K Walk Event 2025 */}
+          <div className="relative">
+            <div className="absolute left-0 top-0 h-full w-1 bg-white"></div>
             <div className="relative ml-8">
               <div className="absolute -left-11 top-0 w-8 h-8 rounded-full border-4 border-kelly-green bg-white"></div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-kelly-green">
