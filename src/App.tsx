@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom'
-import { Cookie, CalendarDays, HandHeart } from 'lucide-react'
+import { Activity, CalendarDays, HandHeart } from 'lucide-react'
 import zoomedLogo from './assets/zoomed.jpg'
 import facePic from './assets/face.jpg'
-import bannerPic from './assets/picture banner.jpg'
+import bannerPic from './assets/2026banner.png'
 import Impact from './pages/Impact'
 import Contact from './pages/Contact'
 import MailingListSignup from './components/MailingListSignup'
@@ -550,25 +550,27 @@ function HomePage() {
       {/* Events Section */}
       <div id="events" className="py-16">
         <div className="container-custom">
-          <h2 className="text-3xl font-bold mb-12 text-center">Recent Events</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">Upcoming Events</h2>
           <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
-            <div className="bg-red-600 text-white p-6">
-              <h3 className="text-2xl font-bold">Big Elfin Cookie Crumble - Cookie Contest</h3>
-              <p className="text-lg mt-2">December 10th, 2025</p>
+            <div className="p-6" style={{ backgroundColor: '#3fbdf4' }}>
+              <h3 className="text-2xl font-bold text-white">Walk the Talk 5K Run & 1 Mile Walk</h3>
+              <p className="text-lg mt-2 text-white">Saturday, May 30th, 2026</p>
             </div>
             <div className="p-6">
               <p className="text-gray-600 mb-6">
-                Come join us for a fun-filled day of delicious treats at the Big Elfin' Cookie Crumble - Cookie Contest! 
-                Get ready to taste some incredible holiday cookies and vote for your favorite. We'll have five special 
-                judges, twelve contestants, and a WHOLE LOTTA holiday fun!
+                Join us for our 4th Annual Walk the Talk 5K Run & 1 Mile Walk! This event brings our community together 
+                to support local charitable organizations and make a positive impact in Southern New Jersey.
               </p>
               <a 
-                href="https://www.eventbrite.com/e/big-elfin-cookie-crumble-cookie-contest-tickets-1924363987489?aff=oddtdtcreator" 
+                href="https://runsignup.com/Race/NJ/WestDeptford/WalktheTalk5K" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="bg-red-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-red-700 inline-block transform hover:scale-105 hover:shadow-lg transition-all duration-300"
+                className="text-white px-8 py-3 rounded-lg text-lg font-semibold inline-block transform hover:scale-105 hover:shadow-lg transition-all duration-300"
+                style={{ backgroundColor: '#3fbdf4' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#2da8d8'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#3fbdf4'}
               >
-                Sign Up Now - It's Free!
+                Register Now
               </a>
             </div>
           </div>
@@ -675,10 +677,10 @@ const features = [
     icon: <CalendarDays className="h-12 w-12" />
   },
   {
-    title: "Big Elfin Cookie Crumble - Cookie Contest",
-    description: "Join us for holiday fun on December 10th!",
-    link: "https://www.eventbrite.com/e/big-elfin-cookie-crumble-cookie-contest-tickets-1924363987489?aff=oddtdtcreator",
-    icon: <Cookie className="h-12 w-12" />
+    title: "Walk the Talk 5K Run & 1 Mile Walk",
+    description: "Join us on May 30th, 2026!",
+    link: "https://runsignup.com/Race/NJ/WestDeptford/WalktheTalk5K",
+    icon: <Activity className="h-12 w-12" />
   },
   {
     title: "Making an Impact",

@@ -12,9 +12,30 @@ const Impact = () => {
       {/* Impact Timeline */}
       <div className="container-custom py-16">
         <div className="space-y-12">
+          {/* 4th Annual 5K Run & Walk - May 2026 */}
+          <div className="relative">
+            <div className="absolute left-0 top-0 h-full w-1" style={{ backgroundColor: '#3fbdf4' }}></div>
+            <div className="relative ml-8">
+              <div className="absolute -left-11 top-0 w-8 h-8 rounded-full border-4 bg-white" style={{ borderColor: '#3fbdf4' }}></div>
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden border-2" style={{ borderColor: '#3fbdf4' }}>
+                <div className="text-white px-6 py-3" style={{ backgroundColor: '#3fbdf4' }}>
+                  <span className="text-lg font-semibold">May 30th, 2026</span>
+                </div>
+                <div className="p-6">
+                  <h2 className="text-2xl font-bold text-gray-800 mb-4">4th Annual 5k Walk</h2>
+                  <p className="text-gray-600">
+                    Join us for our 4th Annual Walk the Talk 5K Run & 1 Mile Walk! This event brings our community together 
+                    to support local charitable organizations and make a positive impact in Southern New Jersey. Together, 
+                    we continue our mission of connecting people and creating lasting change in our communities.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Cookie Contest Event - December 2025 */}
           <div className="relative">
-            <div className="absolute left-0 top-0 h-full w-1 bg-red-600"></div>
+            <div className="absolute left-0 top-0 h-full w-1 bg-gray-300"></div>
             <div className="relative ml-8">
               <div className="absolute -left-11 top-0 w-8 h-8 rounded-full border-4 border-red-600 bg-white"></div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-red-600">
